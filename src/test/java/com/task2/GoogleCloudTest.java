@@ -15,90 +15,90 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class HurtMePlentyTest
+public class GoogleCloudTest
 {
 
 
     WebDriver driver;
-    HomePage homePage;
-    SearchResultsPage searchResultsPage;
-    PricingCalculatorPage pricingCalculatorPage;
+    FrontPage frontPage;
+    ResultsPage resultsPage;
+    RateCalculatorPage rateCalculatorPage;
     @Test(groups = {"functional","smoke"}, priority = 1)
     //@BeforeClass
     public void environmentTest()
     {
         driver = Factorybrowser1.setupBrowser("chrome","https://cloud.google.com/");
-        homePage = PageFactory.initElements(driver, HomePage.class);
-        searchResultsPage = PageFactory.initElements(driver, SearchResultsPage.class);
-        pricingCalculatorPage = PageFactory.initElements(driver, PricingCalculatorPage.class);
+        frontPage = PageFactory.initElements(driver, FrontPage.class);
+        resultsPage = PageFactory.initElements(driver, ResultsPage.class);
+        rateCalculatorPage = PageFactory.initElements(driver, RateCalculatorPage.class);
     }
 
     @Test(groups = {"functional","smoke"}, priority = 2)
     public void homePageTest() throws InterruptedException
     {
-        homePage.searchFor("Google Cloud Platform Pricing Calculator");
+        frontPage.searchFor("Google Cloud Platform Pricing Calculator");
     }
     @Test(groups = {"functional","smoke"}, priority = 3)
     void clickOnSearchResult() throws InterruptedException
     {
-        searchResultsPage.clickOnSearchResult();
+        resultsPage.clickOnSearchResult();
         Thread.sleep(6000);
     }
     @Test(groups = {"smoke"}, priority = 4)
     void noOfInstance() throws InterruptedException
     {
-        pricingCalculatorPage.setNoOfInstances();
+        rateCalculatorPage.setNoOfInstances();
     }
     @Test(groups = {"smoke"}, priority = 5)
     void setSeries() throws InterruptedException
     {
-        pricingCalculatorPage.setSeries();
+        rateCalculatorPage.setSeries();
     }
     @Test(groups = {"smoke"}, priority = 6)
     void setMachineTypes() throws InterruptedException
     {
-        pricingCalculatorPage.setMachineTypes();
+        rateCalculatorPage.setMachineTypes();
     }
     @Test(groups = {"smoke"}, priority = 7)
     void setSustainedUseDiscounts() throws InterruptedException
     {
-        pricingCalculatorPage.setSustainedUseDiscounts();
+        rateCalculatorPage.setSustainedUseDiscounts();
     }
     @Test(groups = {"smoke"}, priority = 8)
     void setAddGPUs() throws InterruptedException
     {
-        pricingCalculatorPage.setAddGPUs();
+        rateCalculatorPage.setAddGPUs();
     }
     @Test(groups = {"smoke"}, priority = 9)
     void setGpuType() throws InterruptedException
     {
-        pricingCalculatorPage.setGpuType();
+        rateCalculatorPage.setGpuType();
     }
     @Test(groups = {"smoke"}, priority = 10)
     void setNoOfGPUs() throws InterruptedException
     {
-        pricingCalculatorPage.setNoOfGPUs();
+        rateCalculatorPage.setNoOfGPUs();
     }
     @Test(groups = {"smoke"}, priority = 11)
     void setLocalSSD() throws InterruptedException
     {
-        pricingCalculatorPage.setLocalSSD();
+        rateCalculatorPage.setLocalSSD();
     }
     @Test(groups = {"smoke"}, priority = 12)
     void setCommittedUsage() throws InterruptedException
     {
-        pricingCalculatorPage.setCommittedUsage();
+        rateCalculatorPage.setCommittedUsage();
     }
     @Test(groups = {"smoke"}, priority = 13)
     void setAddToEstimate() throws InterruptedException
     {
-        pricingCalculatorPage.setAddToEstimate();
+        rateCalculatorPage.setAddToEstimate();
     }
     //@AfterClass
     @Test(groups = {"smoke"}, priority = 14)
     void closeDriver()
     {
-        homePage.closeDrive();
+        frontPage.closeDrive();
     }
 
     @AfterMethod(groups = {"smoke"})

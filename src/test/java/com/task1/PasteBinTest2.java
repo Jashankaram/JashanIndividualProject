@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Test_A
+public class PasteBinTest2
 {
     WebDriver driver;
     @BeforeClass

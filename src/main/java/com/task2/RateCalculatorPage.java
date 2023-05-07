@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class PricingCalculatorPage
+public class RateCalculatorPage
 {
 
     WebDriver driver;
@@ -68,7 +68,7 @@ public class PricingCalculatorPage
     @FindBy(xpath = "//form[@name='ComputeEngineForm']//button[@type='button'][normalize-space()='Add to Estimate']")
     WebElement addToEstimateButton;
 
-    public PricingCalculatorPage(WebDriver driver)
+    public RateCalculatorPage(WebDriver driver)
     {
         this.driver = driver;
         PageFactory.initElements(driver, this);

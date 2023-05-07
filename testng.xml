@@ -10,7 +10,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.task2.HurtMePlentyTest"></class>
+            <class name="com.task2.GoogleCloudTest"></class>
         </classes>
     </test>
 </suite>

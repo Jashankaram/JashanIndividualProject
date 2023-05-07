@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage
+public class FrontPage
 {
     WebDriver driver;
 
     @FindBy(name = "q")
     WebElement searchBox;
 
-    public HomePage(WebDriver driver)
+    public FrontPage(WebDriver driver)
     {
         this.driver = driver;
         PageFactory.initElements(driver, this);
