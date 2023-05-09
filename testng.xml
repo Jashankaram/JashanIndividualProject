@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true"
-          name="Desktop/IndividualProject/src/test/java/com/taskB/HurtMePlentyTest.java">
-        <groups>
-            <run>
-                <include name="functional"/>
-                <include name="smoke"/>
-            </run>
-        </groups>
+    <test verbose="2" preserve-order="true" name="E:/java/IndividualProject/src/test/java/com/task1/PasteBinTest2.java">
         <classes>
+            <class name="com.task1.PasteBinTest2">
+                <methods>
+                    <include name="newPaste"/>
+                    <include name="pasteExpiration"/>
+                    <include name="pasteName"/>
+                    <include name="createNewPaste"/>
+                </methods>
+            </class>
             <class name="com.task2.GoogleCloudTest"></class>
         </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="E:/java/IndividualProject/src/test/java/com/task2">
+        <classes/>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="E:/java/IndividualProject/src/test/java/com/task2/GoogleCloudTest.java">
+        <classes/>
     </test>
 </suite>
